@@ -19,8 +19,6 @@ The following is the list of all the column names and the explanation for it:
 
 * **Category:** The category under which the student software engineering project lies. Eg. LFOSS
 
-* **Group:** The group names of the student projects.
-
 * **Section:** The activity section the student is enrolled. Eg. 1:00 - 1:50
 
 * **(All)SectionAbleToAttend:** The activity section(s) student is able to attend. 
