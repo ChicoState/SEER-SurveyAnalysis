@@ -162,3 +162,129 @@ The following is the list of all the column names and the explanation for it:
 * **PostProgrammingAbility:** Programming Ability of the student on a scale of 1-5 where 1 is beginner and 5 is advanced.
 
 * **HoursPerWeek:** Estimate of hours per week spent on the project, outside lecture and lab. Eg. 10
+
+* **ContinueAfterSemester:** Plan on continuing to contribute to my team project after this semester is over. Eg. True/False
+
+* **ClientGaveFeedback:** Team project had a specific customer/client who gave us feedback on what we built. Eg. True/False
+
+* **MentorGuidance:** Team project had mentor(s) (other than the instructor or students in class) to help provide guidance or 
+	              review our work.
+
+* **OtherProgrammersWillUse:** After the end of the semester, I expect other programmers (besides my team and instructor) to use 
+ 			       my project'scode.
+
+* **PostCommercialProduct:** After the end of the semester, I expect my project to become a commercial (for sale) product.
+
+* **PostServeSchool:** I believe my project can help serve my school (and/or affiliated groups).
+
+* **PostServeLocal:** I believe my project can help serve the local community.
+
+* **PostServeInternational:** I believe my project can help serve national or international communities.
+
+* **PostAppreciateUsefulness:** Working on an FOSS project gives me a better appreciation for the usefulness of computing.
+
+* **PostBenefitSociety:** I have a greater awareness of the potential for computing to benefit society due to working on an FOSS project.
+
+* **PostWantedToHelpPeople:** I wanted to work on an FOSS project because I want to help the people who would benefit from the software.
+
+* **PostInspireSkillsHelpOthers:** Participating in a FOSS project inspires me to use my computing skills to help others.
+
+* **PostDoMyBestHelpOthers:** Knowing that my project will help people motivates me to do my best on the FOSS project.
+
+* **PostHelpDoMyBest:** Working with a FOSS community to develop a project has increased my interest in computing.
+
+* **PostDiverseCommunity:** I enjoyed working on a FOSS project because it allowed me participate in a diverse community 
+	                    of FOSS developers.
+
+* **PostIncreaseInterestComputing:** Working on an FOSS project has increased my interest in computing.
+
+* **PostIncreaseConfidenceComputing:** Working on an FOSS project increased my confidence in my computing ability.
+
+* **PostIncreaseComfortComputing:** Participating in a FOSS project made me more comfortable with computing.
+
+* **PostWelcomingHelpful:** People that I interacted with in the FOSS project were welcoming and helpful.
+
+* **PostContinueContributingFOSS:** I plan to continue contributing to a FOSS project after this course has ended.
+
+* **PostPlanAndDevelop:** I am comfortable that I could participate in the planning and development of a real­world software project.
+
+* **PostListSteps:** I can list the steps in the software process we used in the FOSS project.
+
+* **PostUseProcess:** I can use a software process to develop an FOSS project
+
+* **PostParticipateFOSS:** I am sure that I can actively  participate in an FOSS community to develop a software project.
+
+* **PostConfidenceDiversity:** I have gained some confidence in collaborating with professionals from a variety of locations and cultures.
+
+* **PostImpactComplexity:** I can describe the impact of project complexity on the approaches used to develop software. 
+
+* **PostImpactSize:** I can describe the impact of project size on the approaches used to develop software. 
+
+* **PostMaintainFOSS:** I am confident that I can maintain an FOSS project.
+
+* **PostDescribeDrawbackBenefits:** I can describe the drawbacks and benefits of FOSS to society.
+
+* **PostDescribeToolTechniques:** I can use all tools and techniques employed in my FOSS project.
+
+* **PostTeamInteractions:** I can participate in a FOSS development team’ s interactions.
+
+* **PostBehaveProfessional:** Participation in a FOSS project has improved my understanding of how to behave like a computing professional.
+
+* **PostConfidentialWorkProfessionals:** I am confident about working with computing professionals.
+
+* **PostExcitedWorkProfessionals:** I am excited about working with computing professionals.
+
+* **PostConsiderMajor:** Participation in a FOSS project has caused me to consider computing as a major or minor.
+
+* **PostReinforceMajor:** Participation in a FOSS project has positively reinforced my decision to make computing my major.
+
+* **PostQuestionMajor:** Participating in an HFOSS project has caused me to question my decision to make computing my major.
+
+* **PostConsiderFurtherCourses:** Participation in a FOSS project has caused me to consider taking further computing courses.
+
+* **PostHighlyRevelant:** The subject matter of this FOSS project is highly relevant to my future career plans.
+
+* **PostExperiencedSubjectMajor:** I have a high level of experience in the FOSS subject matter.
+
+* **PostSatisfactionProject:** Overall, I am very satisfied with my learning in the FOSS project.
+
+* **PostPredominantContact:** My predominant contact with my mentor/customer was. Eg. In person.
+
+* **Communicated:** I directly communicated with the customer or mentor. Eg. Each week.
+
+* **PostPromptReply:** My mentor/customer was prompt in replying to me.
+
+* **PostCommunicationHelpful:** My mentor/customer's communication was helpful to my progress on the software development project.
+
+* **PostAccountable:** My mentor/customer held me accountable to completing my work well and on time.
+
+* **PostNetworking:** Interacting with my mentor/customer was valuable for my professional networking.
+
+* **PostCSInnovate:** I believe Computer Science and Software Engineering are fields that further innovation in science and technology.
+
+* **PostCSHelpPeople:** Computer Science and Software Engineering are fields that help people.
+
+* **PostCSPositiveImpact:** Computer Science and Software Engineering are fields that has made a positive impact on the world.
+
+* **ProfessionalExperience:** How many months, if any , of co-­op, internship or other professional experience you have had?
+
+* **PostCommentInvolvement:** Describe the type of involvement you had with the FOSS project
+
+* **PostCommentInteraction:** Describe the interactions you had with the FOSS community
+
+* **PostCommentParticipating:** Describe any other aspect of participating in an FOSS project that you would like us to know about.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
