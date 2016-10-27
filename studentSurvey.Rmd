@@ -1,0 +1,114 @@
+
+read.csv() reads csv file into the data frame that it creates called studentSurvey.
+Input: File path, header=TRUE specifies that data contains a header row and sep="," specifies that data is separated by commas.
+Output: 
+```{r}
+studentSurvey<-read.csv(file="C:/Study/693/CombinedSurvey.csv", header=T, sep=",")
+```
+
+
+// PreMobDevelopment: Interested in mobile development.
+```{r}
+library(psych)
+describeBy(studentSurvey$PreMobDevelopment, studentSurvey$Gender)
+```
+
+
+// PreWebDevelopment: Interested in web development.
+```{r}
+describeBy(studentSurvey$PreWebDevelopment, studentSurvey$Gender)
+```
+
+
+// PreDevelopingTools: Interested in developing tools.
+```{r}
+describeBy(studentSurvey$PreDevelopingTools, studentSurvey$Gender)
+```
+
+
+// PreCommercialProduct: Interested in developing a commercial product.
+```{r}
+describeBy(studentSurvey$PreCommercialProduct, studentSurvey$Gender)
+```
+
+
+// PreServeSchool: Interested in serving a school.
+```{r}
+describeBy(studentSurvey$PreServeSchool, studentSurvey$Gender)
+```
+
+
+// PreServeLocal: Interested in serving a local community.
+```{r}
+describeBy(studentSurvey$PreServeLocal, studentSurvey$Gender)
+```
+
+
+// PreServeIntenational: Interested in serving a national/international communities.
+```{r}
+describeBy(studentSurvey$PreServeIntenational, studentSurvey$Gender)
+```
+
+
+// PreMobDevExp: Confident and Experienced in Mobile Development.
+```{r}
+describeBy(studentSurvey$PreMobDevExp, studentSurvey$Gender)
+```
+
+
+// PreWebDevExp: Confident and Experienced in Web Development.
+```{r}
+describeBy(studentSurvey$PreWebDevExp, studentSurvey$Gender)
+```
+
+
+// PreEmbSystemsExp: Confident and Experienced in Desktop or Embedded Systems Development.
+```{r}
+describeBy(studentSurvey$PreEmbSystemsExp, studentSurvey$Gender)
+```
+
+
+// PreCSInnovate: Computer Science and Software Engineering are fields that further
+// innovate in science and technology.
+```{r}
+describeBy(studentSurvey$PreCSInnovate, studentSurvey$Gender)
+```
+
+
+// PreCSHelpPeople: Computer Science and Software Engineering are fields that help people.
+```{r}
+describeBy(studentSurvey$PreCSHelpPeople, studentSurvey$Gender)
+```
+
+
+// PreInterestUse: Project Prefernce motivated by product being used by many people.
+```{r}
+describeBy(studentSurvey$PreInterestUse, studentSurvey$Gender)
+```
+
+
+// PreInterestWellKnown: Project Prefernce motivated by product becoming well known to
+// people.
+```{r}
+describeBy(studentSurvey$PreInterestWellKnown, studentSurvey$Gender)
+```
+
+
+// Get total count of female and male
+```{r}
+table(studentSurvey$Gender)
+```
+
+
+// Get total count of different project categories selected by students as their first choice.
+```{r}
+table(studentSurvey$CategoryForFirstChoice)
+```
+
+
+
+
+
+
+
+
