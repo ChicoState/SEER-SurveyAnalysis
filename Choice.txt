@@ -1,0 +1,270 @@
+#Descriptive Statistics.
+#1. HoursPerWeek
+describeBy(MyResearch$HoursPerWeek, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 79  | 8.52 | 8    | 6      |
+ | second | 8   | 7.5  | 3.65 | 8.5    |
+ | third  | 2   | 2    | 0    | 2      |
+ | none   | 2   | 7.5  | 0.71 | 7.5    |
+ 
+#2. ContinueAfterSemester
+describeBy(MyResearch$ContinueAfterSemester, MyResearch$Choice, na.rm = TRUE)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 79  | 0.65 | 0.48 | 1      |
+ | second | 8   | 0.5  | 0.53 | 0.5    |
+ | third  | 2   | 1    | 0    | 1      |
+ | none   | 2   | 1    | 0    | 1      |
+ 
+#3. OtherProgrammersWillUse
+describeBy(MyResearch$OtherProgrammersWillUse, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 76  | 3.24 | 1.22 | 3      |
+ | second | 8   | 3.5  | 0.93 | 3.5    |
+ | third  | 1   | 1    | NA   | 1      |
+ | none   | 2   | 3.5  | 0.71 | 3.5    |
+ 
+#4. PostServeSchool
+describeBy(MyResearch$PostServeSchool, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 70  | 3.26 | 1.38 | 3      |
+ | second | 8   | 3.25 | 1.04 | 3      |
+ | third  | 2   | 2    | 1.41 | 2      |
+ | none   | 2   | 4    | 0    | 4      |
+ 
+#5. PostServeLocal
+describeBy(MyResearch$PostServeLocal, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 73  | 3.32 | 1.33 | 3      |
+ | second | 8   | 3.88 | 0.99 | 4      |
+ | third  | 2   | 2.5  | 0.71 | 2.5    |
+ | none   | 1   | 4    | NA   | 4      |
+ 
+#6. PostServeInternational
+describeBy(MyResearch$PostServeInternational, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 73  | 3.45 | 1.42 | 4      |
+ | second | 8   | 4    | 0.93 | 4      |
+ | third  | 2   | 1.5  | 0.71 | 1.5    |
+ | none   | 2   | 3.5  | 0.71 | 3.5    |
+ 
+#7. PostAppreciateUsefulness
+describeBy(MyResearch$PostAppreciateUsefulness, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 32  | 4.5  | 0.72 | 5      |
+ | second | 2   | 4.5  | 0.71 | 4.5    |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 4.5  | 0.71 | 4.5    |
+ 
+#8. PostBenefitSociety
+describeBy(MyResearch$PostBenefitSociety, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 32  | 4.47 | 0.88 | 5      |
+ | second | 2   | 4.5  | 0.71 | 4.5    |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 5    | 0    | 5      |
+ 
+#9. PostWantedToHelpPeople
+describeBy(MyResearch$PostWantedToHelpPeople, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 32  | 4.44 | 0.8  | 5      |
+ | second | 2   | 5    | 0    | 5      |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 5    | 0    | 5      |
+ 
+#10. PostInspireSkillsHelpOthers
+describeBy(MyResearch$PostInspireSkillsHelpOthers, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 32  | 4.5  | 0.88 | 5      |
+ | second | 2   | 5    | 0    | 5      |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 5    | 0    | 5      |
+ 
+#11. PostDoMyBestHelpOthers
+describeBy(MyResearch$PostDoMyBestHelpOthers, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 32  | 4.34 | 0.9  | 5      |
+ | second | 2   | 4.5  | 0.71 | 4.5    |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 4.5  | 0.71 | 4.5    |
+ 
+#12. PostHelpDoMyBest
+describeBy(MyResearch$PostHelpDoMyBest, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 32  | 4.19 | 1    | 4      |
+ | second | 2   | 4.5  | 0.71 | 4.5    |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 4.5  | 0.71 | 4.5    |
+ 
+#13. PostContinueContributingFOSS
+describeBy(MyResearch$PostContinueContributingFOSS, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 31  | 4.39 | 0.76 | 5      |
+ | second | 2   | 4    | 1.41 | 4      |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 5    | 0    | 5      |
+ 
+#14. PostPlanAndDevelop
+describeBy(MyResearch$PostPlanAndDevelop, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 32  | 4.5  | 0.67 | 5      |
+ | second | 2   | 4    | 0    | 4      |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 5    | 0    | 5      |
+ 
+#15. PostListSteps
+describeBy(MyResearch$PostListSteps, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 32  | 4.06 | 0.72 | 4      |
+ | second | 0   | NaN  | NA   | NA     |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 4    | 0    | 4      |
+ 
+#16. PostUseProcess
+describeBy(MyResearch$PostUseProcess, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 32  | 4    | 0.8  | 4      |
+ | second | 2   | 3.5  | 0.71 | 3.5    |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 4    | 0    | 4      |
+ 
+#17. PostParticipateFOSS
+describeBy(MyResearch$PostParticipateFOSS, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 32  | 4.22 | 0.79 | 4      |
+ | second | 2   | 4    | 0    | 4      |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 4.5  | 0.71 | 4.5    |
+ 
+#18. PostConfidenceDiversity
+describeBy(MyResearch$PostConfidenceDiversity, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 32  | 4.34 | 0.75 | 4      |
+ | second | 2   | 4    | 0    | 4      |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 4.5  | 0.71 | 4.5    |
+ 
+#19. PostImpactComplexity
+describeBy(MyResearch$PostImpactComplexity, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 32  | 4.03 | 0.82 | 4      |
+ | second | 2   | 4    | 0    | 4      |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 4    | 0    | 4      |
+ 
+#20. PostImpactSize
+describeBy(MyResearch$PostImpactSize, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 32  | 4.03 | 0.65 | 4      |
+ | second | 2   | 4    | 0    | 4      |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 4.5  | 0.71 | 4.5    |
+ 
+#21. PostMaintainFOSS
+describeBy(MyResearch$PostMaintainFOSS, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 32  | 3.56 | 0.95 | 3      |
+ | second | 2   | 3.5  | 0.71 | 3.5    |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 4.5  | 0.71 | 4.5    |
+ 
+#22. PostDescribeDrawbackBenefits
+describeBy(MyResearch$PostDescribeDrawbackBenefits, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 31  | 3.77 | 0.99 | 4      |
+ | second | 2   | 3.5  | 0.71 | 3.5    |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 4.5  | 0.71 | 4.5    |
+ 
+#23. PostDescribeToolTechniques
+describeBy(MyResearch$PostDescribeToolTechniques, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 31  | 3.48 | 0.93 | 3      |
+ | second | 2   | 4    | 0    | 4      |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 3.5  | 0.71 | 3.5    |
+ 
+#24. PostTeamInteractions
+describeBy(MyResearch$PostTeamInteractions, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 32  | 4.19 | 0.78 | 4      |
+ | second | 2   | 4.5  | 0.71 | 4.5    |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 4    | 0    | 4      |
+ 
+#25. PostBehaveProfessional
+describeBy(MyResearch$PostBehaveProfessional, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 32  | 4.22 | 0.71 | 4      |
+ | second | 2   | 4.5  | 0.71 | 4.5    |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 3.5  | 0.71 | 3.5    |
+ 
+#26. PostConfidentialWorkProfessionals
+describeBy(MyResearch$PostConfidentialWorkProfessionals, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 32  | 4.44 | 0.56 | 4      |
+ | second | 2   | 4.5  | 0.71 | 4.5    |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 3.5  | 0.71 | 3.5    |
+ 
+#27. PostExcitedWorkProfessionals
+describeBy(MyResearch$PostExcitedWorkProfessionals, MyResearch$Choice)
+
+ | Choice | n   | mean | sd   | median |
+ | ------ | --- | ---- | ---- | ------ |   
+ | first  | 32  | 4.44 | 0.72 | 5      |
+ | second | 2   | 4.5  | 0.71 | 4.5    |
+ | third  | 0   | NaN  | NA   | NA     |
+ | none   | 2   | 4.5  | 0.71 | 4.5    |
