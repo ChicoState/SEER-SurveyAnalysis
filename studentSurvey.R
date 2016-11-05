@@ -7,7 +7,7 @@ studentSurvey<-read.csv(file="C:/Study/693/CombinedSurvey.csv", header=T, sep=",
 # shapiro.test() takes numeeric vector as input, and performs Shapiro-Wilk Normality test.
 # Input: desired column of dataframe.
 # Output: w and p-value
-shapiro.test(data.frame$desiredCoulmn)
+shapiro.test(data.frame$desiredColumn)
 
 #install.packages("psych")
 library(psych)
