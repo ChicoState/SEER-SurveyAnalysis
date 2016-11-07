@@ -76,7 +76,9 @@ table(studentSurvey$Gender)
 #16. Get total count of different project categories selected by students as their first choice.
 table(studentSurvey$CategoryForFirstChoice)
 
-
+# 17. Gender_MF: This new variable contains rows that don't have Male and Female values for gender.
+studentSurvey$Gender_MF[studentSurvey$Gender %in% c("", "-", "Abstain")] <- NA
+studentSurvey$Gender_MF<- droplevels(studentSurvey$Gender_MF)
 
 
 
