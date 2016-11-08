@@ -8,11 +8,18 @@
      10      78 
 ****************************************************************************************
 
-// CategoryForFirstChoice: Count of project categories that students selected as their 
-// first choice.
+// Count of project categories that students selected as their 
+// first choice. (Fall 15, Spring 16, Fall 16)
 
    ENTREPRENEURIAL  |  FOSS   |    HFOSS   |  INDUSTRY   |    LFOSS 
-         68             38           2           17             26 
+         65             38           2           25             26 
+****************************************************************************************
+
+// CategoryForFirstChoice: Count of project categories that students selected as their 
+// first choice. (Fall 15, Spring 16)
+
+   ENTREPRENEURIAL  |  FOSS   |    HFOSS   |  INDUSTRY   |    LFOSS 
+         35             27           2           4             23 
 ****************************************************************************************
 
 // PreMobDevelopment: Interested in mobile development.

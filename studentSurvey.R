@@ -76,6 +76,17 @@ table(studentSurvey$Gender)
 #16. Get total count of different project categories selected by students as their first choice.
 table(studentSurvey$CategoryForFirstChoice)
 
+# 17. Gender_MF: This new variable contains rows that don't have Male and Female values for gender.
+studentSurvey$Gender_MF[studentSurvey$Gender %in% c("", "-", "Abstain")] <- NA
+studentSurvey$Gender_MF<- droplevels(studentSurvey$Gender_MF)
+
+#18. CategoryForFirstChoice: This variable contains project category based on student's first project preference.
+studentSurvey$CategoryForFirstChoice[studentSurvey$FirstChoice%in% c("BossyUI")]<-"LFOSS"
+studentSurvey$CategoryForFirstChoice[studentSurvey$FirstChoice%in% c("Top down hack and slash RPG", "TopJam", "Little League Stat Tracker", "Smart Laser Tag", "D&amp;D Character Creation and Party Maintenance", "Radio Station DJ", "GNOME Accessibility", "Ushahidi")]<-"ENTREPRENEURIAL"
+studentSurvey$CategoryForFirstChoice[studentSurvey$FirstChoice%in% c("Release and Quality Management")]<-"INDUSTRY"
+studentSurvey$CategoryForFirstChoice[studentSurvey$FirstChoice%in% c("Apache Spark", "KDevelop", "Mozilla", "RethinkDB", "Akka")]<-"FOSS"
+studentSurvey$CategoryForFirstChoice[studentSurvey$FirstChoice%in% c("MouseTrap")]<-"HFOSS"
+
 
 
 
