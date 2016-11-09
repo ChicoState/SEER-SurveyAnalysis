@@ -15,60 +15,74 @@ library(psych)
 #1. PreMobDevelopment: Interested in mobile development.
 describeBy(studentSurvey$PreMobDevelopment, studentSurvey$Gender)
 shapiro.test(studentSurvey$PreMobDevelopment)
+wilcox.test(PreMobDevelopment~Gender_MF, data=studentSurvey)
 
 #2. PreWebDevelopment: Interested in web development.
 describeBy(studentSurvey$PreWebDevelopment, studentSurvey$Gender)
 shapiro.test(studentSurvey$PreWebDevelopment)
+wilcox.test(PreWebDevelopment~Gender_MF, data=studentSurvey)
 
 #3. PreDevelopingTools: Interested in developing tools.
 describeBy(studentSurvey$PreDevelopingTools, studentSurvey$Gender)
 shapiro.test(studentSurvey$PreDevelopingTools)
+wilcox.test(PreDevelopingTools~Gender_MF, data=studentSurvey)
 
 #4. PreCommercialProduct: Interested in developing a commercial product.
 describeBy(studentSurvey$PreCommercialProduct, studentSurvey$Gender)
 shapiro.test(studentSurvey$PreCommercialProduct)
+wilcox.test(PreCommercialProduct~Gender_MF, data=studentSurvey)
 
 #5. PreServeSchool: Interested in serving a school.
 describeBy(studentSurvey$PreServeSchool, studentSurvey$Gender)
 shapiro.test(studentSurvey$PreServeSchool)
+wilcox.test(PreServeSchool~Gender_MF, data=studentSurvey)
 
 #6. PreServeLocal: Interested in serving a local community.
 describeBy(studentSurvey$PreServeLocal, studentSurvey$Gender)
 shapiro.test(studentSurvey$PreServeLocal)
+wilcox.test(PreServeLocal~Gender_MF, data=studentSurvey)
 
 #7. PreServeIntenational: Interested in serving a national/international communities.
 describeBy(studentSurvey$PreServeIntenational, studentSurvey$Gender)
 shapiro.test(studentSurvey$PreServeIntenational)
+wilcox.test(PreServeIntenational~Gender_MF, data=studentSurvey)
 
 #8. PreMobDevExp: Confident and Experienced in Mobile Development.
 describeBy(studentSurvey$PreMobDevExp, studentSurvey$Gender)
 shapiro.test(studentSurvey$PreMobDevExp)
+wilcox.test(PreMobDevExp~Gender_MF, data=studentSurvey)
 
 #9. PreWebDevExp: Confident and Experienced in Web Development.
 describeBy(studentSurvey$PreWebDevExp, studentSurvey$Gender)
 shapiro.test(studentSurvey$PreWebDevExp)
+wilcox.test(PreWebDevExp~Gender_MF, data=studentSurvey)
 
 #10. PreEmbSystemsExp: Confident and Experienced in Desktop or Embedded Systems Development.
 describeBy(studentSurvey$PreEmbSystemsExp, studentSurvey$Gender)
 shapiro.test(studentSurvey$PreEmbSystemsExp)
+wilcox.test(PreEmbSystemsExp~Gender_MF, data=studentSurvey)
 
 #11. PreCSInnovate: Computer Science and Software Engineering are fields that further
 #    innovate in science and technology.
 describeBy(studentSurvey$PreCSInnovate, studentSurvey$Gender)
 shapiro.test(studentSurvey$PreCSInnovate)
+wilcox.test(PreCSInnovate~Gender_MF, data=studentSurvey)
 
 #12. PreCSHelpPeople: Computer Science and Software Engineering are fields that help people.
 describeBy(studentSurvey$PreCSHelpPeople, studentSurvey$Gender)
 shapiro.test(studentSurvey$PreCSHelpPeople)
+wilcox.test(PreCSHelpPeople~Gender_MF, data=studentSurvey)
 
 #13. PreInterestUse: Project Prefernce motivated by product being used by many people.
 describeBy(studentSurvey$PreInterestUse, studentSurvey$Gender)
 shapiro.test(studentSurvey$PreInterestUse)
+wilcox.test(PreInterestUse~Gender_MF, data=studentSurvey)
 
 #14. PreInterestWellKnown: Project Prefernce motivated by product becoming well known to
 #people.
 describeBy(studentSurvey$PreInterestWellKnown, studentSurvey$Gender)
 shapiro.test(studentSurvey$PreInterestWellKnown)
+wilcox.test(PreInterestWellKnown~Gender_MF, data=studentSurvey)
 
 #15. Get total count of female and male
 table(studentSurvey$Gender)
@@ -86,6 +100,9 @@ studentSurvey$CategoryForFirstChoice[studentSurvey$FirstChoice%in% c("Top down h
 studentSurvey$CategoryForFirstChoice[studentSurvey$FirstChoice%in% c("Release and Quality Management")]<-"INDUSTRY"
 studentSurvey$CategoryForFirstChoice[studentSurvey$FirstChoice%in% c("Apache Spark", "KDevelop", "Mozilla", "RethinkDB", "Akka")]<-"FOSS"
 studentSurvey$CategoryForFirstChoice[studentSurvey$FirstChoice%in% c("MouseTrap")]<-"HFOSS"
+
+#19. Counting number of women and men who chose respective categories as their first choice.
+count(studentSurvey,c("CategoryForFirstChoice", "Gender_MF"))
 
 
 
