@@ -101,6 +101,9 @@ studentSurvey$CategoryForFirstChoice[studentSurvey$FirstChoice%in% c("Release an
 studentSurvey$CategoryForFirstChoice[studentSurvey$FirstChoice%in% c("Apache Spark", "KDevelop", "Mozilla", "RethinkDB", "Akka")]<-"FOSS"
 studentSurvey$CategoryForFirstChoice[studentSurvey$FirstChoice%in% c("MouseTrap")]<-"HFOSS"
 
+#19. Counting number of women and men who chose respective categories as their first choice.
+count(studentSurvey,c("CategoryForFirstChoice", "Gender_MF"))
+
 
 
 
