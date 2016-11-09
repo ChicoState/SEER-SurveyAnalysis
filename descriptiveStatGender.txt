@@ -34,7 +34,8 @@ Male
   |----|------|------|--------|
   | 29 | 2.72 | 1.1  |    3   | 
 
-  W = 0.90379, p-value = 1.321e-08
+  Shapiro-Wilk:  W = 0.90379, p-value = 1.321e-08
+  Mann-Whitney-Wilcoxon Test:  W = 85.5, p-value = 0.5234
 ****************************************************************************************
 
 // PreWebDevelopment: Interested in web development.
@@ -49,7 +50,8 @@ Male
   |-----|------|------|--------|
   | 78  | 1.88 | 1.08 |  1.5   | 
 
-  W = 0.8616, p-value = 6.586e-13
+  Shapiro-Wilk:  W = 0.8616, p-value = 6.586e-13
+  Mann-Whitney-Wilcoxon Test:  W = 423.5, p-value = 0.6406
 ****************************************************************************************
 
 // PreDevelopingTools: Interested in developing tools.
@@ -64,7 +66,8 @@ Male
   |-----|------|------|--------|
   | 78  | 2.45 | 1.11 |   2    | 
 
-  W = 0.91074, p-value = 5.984e-10
+  Shapiro-Wilk:  W = 0.91074, p-value = 5.984e-10
+  Mann-Whitney-Wilcoxon Test:  W = 284, p-value = 0.1499
 ****************************************************************************************
 
 // PreCommercialProduct: Interested in developing a commercial product.
@@ -79,7 +82,8 @@ Male
   |-----|------|------|--------|
   | 78  | 2.33 | 1.17 |   2    | 
 
-  W = 0.90519, p-value = 2.49e-10
+  Shapiro-Wilk:  W = 0.90519, p-value = 2.49e-10
+  Mann-Whitney-Wilcoxon Test:  W = 428.5, p-value = 0.6037
 ****************************************************************************************
 
 // PreServeSchool: Interested in serving a school.
@@ -94,7 +98,8 @@ Male
   |-----|------|------|--------|
   | 78  |  2.4 | 1.11 |   2    | 
 
-  W = 0.91124, p-value = 6.484e-10
+  Shapiro-Wilk:  W = 0.91124, p-value = 6.484e-10
+  Mann-Whitney-Wilcoxon Test:  W = 363, p-value = 0.7155
 ****************************************************************************************
 
 // PreServeLocal: Interested in serving a local community.
@@ -109,7 +114,8 @@ Male
   |-----|------|------|--------|
   | 78  | 2.41 | 1.1  |   2    | 
 
-  W = 0.91244, p-value = 7.89e-10
+  Shapiro-Wilk:  W = 0.91244, p-value = 7.89e-10
+  Mann-Whitney-Wilcoxon Test:  W = 332.5, p-value = 0.434
 ****************************************************************************************
 
 // PreServeIntenational: Interested in serving a national/international communities.
@@ -124,7 +130,8 @@ Male
   |-----|------|------|--------|
   | 78  | 2.4  | 1.09 |   2    | 
 
-  W = 0.91467, p-value = 1.139e-09
+  Shapiro-Wilk:  W = 0.91467, p-value = 1.139e-09
+  Mann-Whitney-Wilcoxon Test:  W = 315, p-value = 0.3071
 ****************************************************************************************
 
 // PreMobDevExp: Confident and Experienced in Mobile Development.
@@ -139,7 +146,8 @@ Male
   |-----|------|------|--------|
   | 29  | 2.79 | 1.08 |   3    | 
 
-  W = 0.90416, p-value = 1.39e-08
+  Shapiro-Wilk:  W = 0.90416, p-value = 1.39e-08
+  Mann-Whitney-Wilcoxon Test:  W = 70, p-value = 0.9182
 ****************************************************************************************
 
 // PreWebDevExp: Confident and Experienced in Web Development.
@@ -154,7 +162,8 @@ Male
   |-----|------|------|--------|
   | 29  | 2.17 | 1.07 |   2    | 
 
-  W = 0.90024, p-value = 8.216e-09
+  Shapiro-Wilk:  W = 0.90024, p-value = 8.216e-09
+  Mann-Whitney-Wilcoxon Test:  W = 81, p-value = 0.6854
 ****************************************************************************************
 
 // PreEmbSystemsExp: Confident and Experienced in Desktop or Embedded Systems Development.
@@ -169,7 +178,8 @@ Male
   |-----|------|------|--------|
   | 29  | 1.93 | 0.96 |   2    | 
  
-  W = 0.88141, p-value = 7.771e-10
+  Shapiro-Wilk:  W = 0.88141, p-value = 7.771e-10
+  Mann-Whitney-Wilcoxon Test:  W = 37, p-value = 0.064
 ****************************************************************************************
 
 // PreCSInnovate: Computer Science and Software Engineering are fields that further
@@ -185,7 +195,8 @@ Male
   |-----|------|------|--------|
   | 78  | 1.18 | 0.42 |    1   | 
 
-  W = 0.67578, p-value < 2.2e-16  
+  Shapiro-Wilk:  W = 0.67578, p-value < 2.2e-16  
+  Mann-Whitney-Wilcoxon Test:  W = 440.5, p-value = 0.3257
 ****************************************************************************************
 
 // PreCSHelpPeople: Computer Science and Software Engineering are fields that help people.
@@ -200,7 +211,8 @@ Male
   |-----|------|------|--------|
   | 78  | 1.31 | 0.59 |   1    | 
   
-  W = 0.73613, p-value < 2.2e-16
+  Shapiro-Wilk:  W = 0.73613, p-value < 2.2e-16
+  Mann-Whitney-Wilcoxon Test:  W = 377.5, p-value = 0.832
 ****************************************************************************************
 
 // PreInterestUse: Project Prefernce motivated by product being used by many people.
@@ -215,7 +227,8 @@ Male
   |-----|------|------|--------|
   | 29  | 1.93 | 1.07 |   2    | 
   
-  W = 0.79449, p-value = 1.268e-05
+  Shapiro-Wilk:  W = 0.79449, p-value = 1.268e-05
+  Mann-Whitney-Wilcoxon Test:  W = 71.5, p-value = 0.9792
 ****************************************************************************************
 
 // PreInterestWellKnown: Project Prefernce motivated by product becoming well known to
@@ -231,7 +244,8 @@ Male
   |-----|------|------|--------|
   | 29  | 2.14 | 1.27 |   2    | 
  
-  W = 0.8938, p-value = 1.121e-06
+  Shapiro-Wilk:  W = 0.8938, p-value = 1.121e-06
+  Mann-Whitney-Wilcoxon Test:  W = 62.5, p-value = 0.6213
 ****************************************************************************************
 
 
