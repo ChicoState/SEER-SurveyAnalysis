@@ -20,6 +20,15 @@ describeBy(MyResearch$ContinueAfterSemester, MyResearch$ChoiceOther, na.rm = TRU
  | first  | 79  | 0.65 | 0.48 | 1      |
  | other  | 12  | 0.67 | 0.49 | 1      |
  
+ % of each group answering TRUE or FALSE
+ First:-
+    True - 64.56% (51 out of 79)
+    False - 35.44% (28 out of 79)
+    
+ Other:-
+    True - 66.66% (8 out of 12)
+    False - 33.33% (4 out of 12)
+ 
 #3. OtherProgrammersWillUse
 describeBy(MyResearch$OtherProgrammersWillUse, MyResearch$ChoiceOther)
 
