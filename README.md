@@ -167,6 +167,8 @@ The following is the list of all the column names and the explanation for it:
 
 * **ClientGaveFeedback:** Team project had a specific customer/client who gave us feedback on what we built. Eg. True/False
 
+* **PostTechnicalLeader:**  My team project had a specific technical leaders (other than the instructor or students in class) who advised the development team. E.g True/False
+
 * **MentorGuidance:** Team project had mentor(s) (other than the instructor or students in class) to help provide guidance or 
 	              review our work.
 
@@ -230,6 +232,14 @@ The following is the list of all the column names and the explanation for it:
 
 * **PostBehaveProfessional:** Participation in a FOSS project has improved my understanding of how to behave like a computing professional.
 
+* **PostSoftwareTests:** I can write automated software tests to verify that the software reliably behaves as was intended. Eg. 1-5
+
+* **PostDevOps:** I can set up and manage a development environment and development operations (DevOps) tools for collaborating on a software development team. Eg 1-5
+
+* **PostUseDesignPattern:** I can identify and use software design patterns appropriately. E.g 1-5
+
+* **PostAnalyzeDesign:** I can analyze and evaluate the design of large software projects for strengths and weaknesses. E.g 1-5
+
 * **PostConfidentialWorkProfessionals:** I am confident about working with computing professionals.
 
 * **PostExcitedWorkProfessionals:** I am excited about working with computing professionals.
@@ -252,13 +262,27 @@ The following is the list of all the column names and the explanation for it:
 
 * **Communicated:** I directly communicated with the customer or mentor. Eg. Each week.
 
+* **PostClientFaceToFace:** How often did you personally communicate with your mentor/client FACE-TO-FACE? E.g 1-5
+
+* **PostClientSynchronous:** How often did you personally communicate with your mentor/client REMOTELY AT THE SAME TIME (e.g. phone, video calling, instant messaging concurrently, etc)
+
+* **PostClientAsynchronous:** How often did you personally communicate with your mentor/client REMOTELY AT DIFFERENT TIMES (e.g. email, message boards, instant messaging at different times, etc
+
 * **PostPromptReply:** My mentor/customer was prompt in replying to me.
 
 * **PostCommunicationHelpful:** My mentor/customer's communication was helpful to my progress on the software development project.
 
+* **PostClientTechnical:** My client(s) (and other members of the team, outside of the class) provided feedback with technical expertise. E.g 1-5
+
+* **PostClientBusiness:** My client(s) (and other members of the team, outside of the class) provided feedback with business expertise. E.g 1-5 
+
 * **PostAccountable:** My mentor/customer held me accountable to completing my work well and on time.
 
 * **PostNetworking:** Interacting with my mentor/customer was valuable for my professional networking.
+
+* **PostHelpfulClients:** Explain what was most helpful about working with your client(s) (and other members of the team, outside of the class). E.g Free response
+
+* **PostDifficultClients:** Explain what was most difficult about working with your client(s) (and other members of the team, outside of the class) E.g Free response
 
 * **PostCSInnovate:** I believe Computer Science and Software Engineering are fields that further innovation in science and technology.
 
@@ -273,32 +297,6 @@ The following is the list of all the column names and the explanation for it:
 * **PostCommentInteraction:** Describe the interactions you had with the FOSS community
 
 * **PostCommentParticipating:** Describe any other aspect of participating in an FOSS project that you would like us to know about.
-
-* **PostSoftwareTests:** I can write automated software tests to verify that the software reliably behaves as was intended. Eg. 1-5
-
-* **PostDevOps:** I can set up and manage a development environment and development operations (DevOps) tools for collaborating on a software development team. Eg 1-5
-
-* **PostUseDesignPattern:** I can identify and use software design patterns appropriately. E.g 1-5
-
-* **PostAnalyzeDesign:** I can analyze and evaluate the design of large software projects for strengths and weaknesses. E.g 1-5
-
-* **PostTechnicalLeader:**  My team project had a specific technical leaders (other than the instructor or students in class) who advised the development team.
-
-* **PostClientFaceToFace:** How often did you personally communicate with your mentor/client FACE-TO-FACE? E.g 1-5
-
-* **PostClientSynchronous:** How often did you personally communicate with your mentor/client REMOTELY AT THE SAME TIME (e.g. phone, video calling, instant messaging concurrently, etc)
-
-* **PostClientAsynchronous:** How often did you personally communicate with your mentor/client REMOTELY AT DIFFERENT TIMES (e.g. email, message boards, instant messaging at different times, etc
-
-* **PostClientTechnical:** My client(s) (and other members of the team, outside of the class) provided feedback with technical expertise. E.g 1-5
-
-* **PostClientBusiness:** My client(s) (and other members of the team, outside of the class) provided feedback with business expertise. E.g 1-5 
-
-* **PostHelpfulClients:** Explain what was most helpful about working with your client(s) (and other members of the team, outside of the class). E.g Free response
-
-* **PostDifficultClients:** Explain what was most difficult about working with your client(s) (and other members of the team, outside of the class) E.g Free response
-
-
 
 
 
