@@ -1,4 +1,7 @@
 ﻿# Software Engineering Education Research
+ 
+[Slack discussion board](https://seerlab.slack.com/)
+ 
 ## Survey Analysis
 
 The **Combined Survey.csv** cotains the columns from the student survey collected for the Software Engineering class from undergraduates and graduate students. It consists of pre-semester and post-semster data for the classes CSCI430(undergraduate) and CSCI630(graduate). The column with the prefix Pre consists of pre-semester data whereas the column with prefix Post consists of post-semester data. 
