@@ -36,7 +36,7 @@ The following is the list of all the column names and the explanation for it:
 
 * **PreBenefitSociety:** I expect to have a greater awareness of the potential for computing to benefit society due to working on a software engineering project. E.g 1-5
 
-* **PreHelpPeople:**I want to work on a software engineering project because I want to help the people who would benefit from the software. E.g 1-5
+* **PreHelpPeople:** I want to work on a software engineering project because I want to help the people who would benefit from the software. E.g 1-5
 
 * **PreHelpOthers:** Participating in a software engineering project inspires me to use my computing skills to help others. E.g 1-5
 
