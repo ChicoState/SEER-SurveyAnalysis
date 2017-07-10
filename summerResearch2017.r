@@ -32,11 +32,45 @@ describeBy(surveyDataSummer2017$PostClientBusiness, surveyDataSummer2017$PostPro
 #PostCSHelpeople
 describeBy(surveyDataSummer2017$PostCSHelpPeople, surveyDataSummer2017$PostProject)
 
+#PostIncreaseComfortComputing
+describeBy(surveyDataSummer2017$PostIncreaseComfortComputing, surveyDataSummer2017$PostProject)
+
+#PostWelcomingHelpful
+describeBy(surveyDataSummer2017$PostWelcomingHelpful, surveyDataSummer2017$PostProject)
+
+#PostMaintainFOSS
+describeBy(surveyDataSummer2017$PostMaintainFOSS, surveyDataSummer2017$PostProject)
+
+#PostBehaveProfessional
+describeBy(surveyDataSummer2017$PostBehaveProfessional, surveyDataSummer2017$PostProject)
+
+#PostHighlyRelevant
+describeBy(surveyDataSummer2017$PostHighlyRevelant, surveyDataSummer2017$PostProject)
+
+#PostHelpfulNetworking
+describeBy(surveyDataSummer2017$PostHelpfulClients, surveyDataSummer2017$PostProject)
+
+#PostCsPositiveImpact
+describeBy(surveyDataSummer2017$PostPositiveImpact, surveyDataSummer2017$PostProject)
+
+#PostCommunicationHelpful
+describeBy(surveyDataSummer2017$PostCommunicationHelpful, surveyDataSummer2017$PostProject)
+
+#PostCommunicated
+describeBy(surveyDataSummer2017$PostCommunicated, surveyDataSummer2017$PostProject)
+
+#PostDescribeToolTechniques
+describeBy(surveyDataSummer2017$PostDescribeToolTechniques, surveyDataSummer2017$PostProject)
+
 #PostCSPositiveImpact
 describeBy(surveyDataSummer2017$PostCSPositiveImpact, surveyDataSummer2017$PostProject)
+
+#PostWantedToHelpPeople
+describeBy(surveyDataSummer2017$PostWantedTohelpPeople, surveyDataSummer2017$PostProject)
 
 #PostServeLocal
 describeBy(surveyDataSummer2017$PostServeInternational, surveyDataSummer2017$PostProject)
 
 #PostServeSchool
-describeBy(surveyDataSummer2017$PostServeSchool, surveyDataSummer2017$PostProject, na.rm=TRUE)
+describeBy(surveyDataSummer2017$PostServeSchool, surveyDataSummer2017$PostProject)
+
