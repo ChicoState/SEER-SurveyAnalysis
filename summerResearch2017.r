@@ -3,9 +3,8 @@ library(psych)
 
 #Read in data and stored it in surveyDataSummer2017 and ignore DK
 surveyDataSummer2017 <- read.csv(file="C:/Users/william/Desktop/SEER-SurveyAnalysis/TechStartupSummer2017.csv", header=T, sep=",")
-#ignoring DK, gsub("DK", "", surveyDataSummer2017))
-#Start outputting to a file called summerResearchResults.txt
-sink('summerResearchResults.txt')
+#ignoring DKgsub("DK", "", surveyDataSummer2017)
+surveyDataSummer2017[surveyDataSummer2017 == "DK"] <- NA
 
 #Created a new column, ProjectType, which categorizes the projects.
 surveyDataSummer2017$ProjectType[surveyDataSummer2017$PostProject%in% c("BossyUI", "BossyUI ")] <- "LFOSS"
@@ -23,84 +22,81 @@ surveyDataSummer2017$IsTechStartup[surveyDataSummer2017$ProjectType%in% c("HFOSS
 #Summary statistics of a variable by choice of project.
 
 #PostBenefitSociety
-describeBy(surveyDataSummer2017$PostBenefitSociety, surveyDataSummer2017$PostProject)
+suppressWarnings(describeBy(surveyDataSummer2017$PostBenefitSociety, surveyDataSummer2017$PostProject))
 shapiro.test(surveyDataSummer2017$PostBenefitSociety)
 
 #PostAppreciateUsefulness
-describeBy(surveyDataSummer2017$PostAppreciateUsefulness, surveyDataSummer2017$PostProject)
+suppressWarnings(describeBy(surveyDataSummer2017$PostAppreciateUsefulness, surveyDataSummer2017$PostProject))
 shapiro.test(surveyDataSummer2017$PostAppreciateUsefulness)
 
 #PostTeamInteractions
-describeBy(surveyDataSummer2017$PostTeamInteractions, surveyDataSummer2017$PostProject)
+suppressWarnings(describeBy(surveyDataSummer2017$PostTeamInteractions, surveyDataSummer2017$PostProject))
 shapiro.test(surveyDataSummer2017$PostTeamInteractions)
 
 #PostClientTechnical
-describeBy(surveyDataSummer2017$PostClientTechnical, surveyDataSummer2017$PostProject)
+suppressWarnings(describeBy(surveyDataSummer2017$PostClientTechnical, surveyDataSummer2017$PostProject))
 shapiro.test(surveyDataSummer2017$PostClientTechnical)
 
 #PostClientBusiness
-describeBy(surveyDataSummer2017$PostClientBusiness, surveyDataSummer2017$PostProject)
+suppressWarnings(describeBy(surveyDataSummer2017$PostClientBusiness, surveyDataSummer2017$PostProject))
 shapiro.test(surveyDataSummer2017$PostClientBusiness)
 
 #PostCSHelpeople
-describeBy(surveyDataSummer2017$PostCSHelpPeople, surveyDataSummer2017$PostProject)
+suppressWarnings(describeBy(surveyDataSummer2017$PostCSHelpPeople, surveyDataSummer2017$PostProject))
 shapiro.test(surveyDataSummer2017$PostCSHelpPeople)
 
 #PostIncreaseComfortComputing
-describeBy(surveyDataSummer2017$PostIncreaseComfortComputing, surveyDataSummer2017$PostProject)
+suppressWarnings(describeBy(surveyDataSummer2017$PostIncreaseComfortComputing, surveyDataSummer2017$PostProject))
 shapiro.test(surveyDataSummer2017$PostIncreaseComfortComputing)
 
 #PostWelcomingHelpful
-describeBy(surveyDataSummer2017$PostWelcomingHelpful, surveyDataSummer2017$PostProject)
+suppressWarnings(describeBy(surveyDataSummer2017$PostWelcomingHelpful, surveyDataSummer2017$PostProject))
 shapiro.test(surveyDataSummer2017$PostWelcomingHelpful)
 
 #PostMaintainFOSS
-describeBy(surveyDataSummer2017$PostMaintainFOSS, surveyDataSummer2017$PostProject)
+suppressWarnings(describeBy(surveyDataSummer2017$PostMaintainFOSS, surveyDataSummer2017$PostProject))
 shapiro.test(surveyDataSummer2017$PostMaintainFOSS)
 
 #PostBehaveProfessional
-describeBy(surveyDataSummer2017$PostBehaveProfessional, surveyDataSummer2017$PostProject)
+suppressWarnings(describeBy(surveyDataSummer2017$PostBehaveProfessional, surveyDataSummer2017$PostProject))
 shapiro.test(surveyDataSummer2017$PostBehaveProfessional)
 
 #PostHighlyRelevant
-describeBy(surveyDataSummer2017$PostHighlyRevelant, surveyDataSummer2017$PostProject)
+suppressWarnings(describeBy(surveyDataSummer2017$PostHighlyRevelant, surveyDataSummer2017$PostProject))
 shapiro.test(surveyDataSummer2017$PostHighlyRevelant)
 
 #PostHelpfulNetworking
-describeBy(surveyDataSummer2017$PostHelpfulClients, surveyDataSummer2017$PostProject)
-shapiro.test(surveyDataSummer2017$PostHelpfulClients)
+#suppressWarnings(describeBy(surveyDataSummer2017$PostHelpfulClients, surveyDataSummer2017$PostProject))
+#shapiro.test(surveyDataSummer2017$PostHelpfulClients)
 
 #PostCsPositiveImpact
-describeBy(surveyDataSummer2017$PostPositiveImpact, surveyDataSummer2017$PostProject)
-shapiro.test(surveyDataSummer2017$PostPositiveImpact)
+#suppressWarnings(describeBy(surveyDataSummer2017$PostPositiveImpact, surveyDataSummer2017$PostProject))
+#shapiro.test(surveyDataSummer2017$PostPositiveImpact)
 
 #PostCommunicationHelpful
-describeBy(surveyDataSummer2017$PostCommunicationHelpful, surveyDataSummer2017$PostProject)
-shapiro.test(surveyDataSummer2017$PostCommunicationHelpful)
+#suppressWarnings(describeBy(surveyDataSummer2017$PostCommunicationHelpful, surveyDataSummer2017$PostProject))
+#shapiro.test(surveyDataSummer2017$PostCommunicationHelpful)
 
 #PostCommunicated
-describeBy(surveyDataSummer2017$PostCommunicated, surveyDataSummer2017$PostProject)
-shapiro.test(surveyDataSummer2017$PostCommunicated)
+#suppressWarnings(describeBy(surveyDataSummer2017$PostCommunicated, surveyDataSummer2017$PostProject))
+#shapiro.test(surveyDataSummer2017$PostCommunicated)
 
 #PostDescribeToolTechniques
-describeBy(surveyDataSummer2017$PostDescribeToolTechniques, surveyDataSummer2017$PostProject)
-shapiro.test(surveyDataSummer2017$PostDescribeToolTechniques)
+#suppressWarnings(describeBy(surveyDataSummer2017$PostDescribeToolTechniques, surveyDataSummer2017$PostProject))
+#shapiro.test(surveyDataSummer2017$PostDescribeToolTechniques)
 
 #PostCSPositiveImpact
-describeBy(surveyDataSummer2017$PostCSPositiveImpact, surveyDataSummer2017$PostProject)
-shapiro.test(surveyDataSummer2017$PostCSPositiveImpact)
+#suppressWarnings(describeBy(surveyDataSummer2017$PostCSPositiveImpact, surveyDataSummer2017$PostProject))
+#shapiro.test(surveyDataSummer2017$PostCSPositiveImpact)
 
 #PostWantedToHelpPeople
-describeBy(surveyDataSummer2017$PostWantedTohelpPeople, surveyDataSummer2017$PostProject)
-shapiro.test(surveyDataSummer2017$PostWantedToHelpPeople)
+#suppressWarnings(describeBy(surveyDataSummer2017$PostWantedTohelpPeople, surveyDataSummer2017$PostProject))
+#shapiro.test(surveyDataSummer2017$PostWantedToHelpPeople)
 
 #PostServeLocal
-describeBy(surveyDataSummer2017$PostServeInternational, surveyDataSummer2017$PostProject)
-shapiro.test(surveyDataSummer2017$PostServeInternational)
+#suppressWarnings(describeBy(surveyDataSummer2017$PostServeInternational, surveyDataSummer2017$PostProject))
+#shapiro.test(surveyDataSummer2017$PostServeInternational)
 
 #PostServeSchool
-describeBy(surveyDataSummer2017$PostServeSchool, surveyDataSummer2017$PostProject, na.rm=TRUE)
-shapiro.test(surveyDataSummer2017$PostServeSchool)
-
-#Stops writing to a file
-sink()
+#describeBy(surveyDataSummer2017$PostServeSchool, surveyDataSummer2017$PostProject, na.rm=TRUE)
+#shapiro.test(surveyDataSummer2017$PostServeSchool)
