@@ -1,11 +1,11 @@
 #Using the library Psych
 library(psych)
-
+setwd("C:/Users/william/Desktop/SEER-SurveyAnalysis")
 #Read in data and stored it in surveyDataSummer2017 and ignore DK
 surveyDataSummer2017 <- read.csv(file="C:/Users/william/Desktop/SEER-SurveyAnalysis/TechStartupSummer2017.csv", header=T, sep=",")
 #ignoring DKgsub("DK", "", surveyDataSummer2017)
 surveyDataSummer2017[surveyDataSummer2017 == "DK"] <- NA
-
+sink('SummerResearch2017.txt')
 #Created a new column, ProjectType, which categorizes the projects.
 surveyDataSummer2017$ProjectType[surveyDataSummer2017$PostProject%in% c("BossyUI", "BossyUI ")] <- "LFOSS"
 surveyDataSummer2017$ProjectType[surveyDataSummer2017$PostProject%in% c("Hack N Slash", "TopJam","Big League Coders", "Smart Laser Tag", "DnD", "GNOME Accessibility", "Ushahidi")]<- "Toy"
@@ -65,7 +65,7 @@ shapiro.test(surveyDataSummer2017$PostBehaveProfessional)
 suppressWarnings(describeBy(surveyDataSummer2017$PostHighlyRevelant, surveyDataSummer2017$IsTechStartup))
 shapiro.test(surveyDataSummer2017$PostHighlyRevelant)
 
-#PostHelpfulNetworking
+#PostHelpfulClients
 #suppressWarnings(describeBy(surveyDataSummer2017$PostHelpfulClients, surveyDataSummer2017$IsTechStartup))
 #shapiro.test(surveyDataSummer2017$PostHelpfulClients)
 
@@ -74,7 +74,7 @@ shapiro.test(surveyDataSummer2017$PostHighlyRevelant)
 #shapiro.test(surveyDataSummer2017$PostPositiveImpact)
 
 #PostCommunicationHelpful
-#suppressWarnings(describeBy(surveyDataSummer2017$PostCommunicationHelpful, surveyDataSummer2017$IsTechStartup))
+#suppressWarnings(describeBy(surveyDataSummer2017$PostCommunicationHelpful, surveyDataSummer2017$IsTechStartup, na.))
 #shapiro.test(surveyDataSummer2017$PostCommunicationHelpful)
 
 #PostCommunicated
@@ -100,3 +100,4 @@ shapiro.test(surveyDataSummer2017$PostHighlyRevelant)
 #PostServeSchool
 #describeBy(surveyDataSummer2017$PostServeSchool, surveyDataSummer2017$IsTechStartup, na.rm=TRUE)
 #shapiro.test(surveyDataSummer2017$PostServeSchool)
+sink()
