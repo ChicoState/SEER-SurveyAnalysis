@@ -24,46 +24,57 @@ surveyDataSummer2017$IsTechStartUp[surveyDataSummer2017$ProjectType%in% c("HFOSS
 #PostBenefitSociety
 suppressWarnings(describeBy(surveyDataSummer2017$PostBenefitSociety, surveyDataSummer2017$IsTechStartup))
 shapiro.test(surveyDataSummer2017$PostBenefitSociety)
+wilcox.test(PostBenefitSociety ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostAppreciateUsefulness
 suppressWarnings(describeBy(surveyDataSummer2017$PostAppreciateUsefulness, surveyDataSummer2017$IsTechStartup))
 shapiro.test(surveyDataSummer2017$PostAppreciateUsefulness)
+wilcox.test(PostAppreciateUsefulness ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostTeamInteractions
 suppressWarnings(describeBy(surveyDataSummer2017$PostTeamInteractions, surveyDataSummer2017$IsTechStartup))
 shapiro.test(surveyDataSummer2017$PostTeamInteractions)
+wilcox.test(PostTeamInteractions ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostClientTechnical
 suppressWarnings(describeBy(surveyDataSummer2017$PostClientTechnical, surveyDataSummer2017$IsTechStartup))
 shapiro.test(surveyDataSummer2017$PostClientTechnical)
+wilcox.test(PostClientTechnical ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostClientBusiness
 suppressWarnings(describeBy(surveyDataSummer2017$PostClientBusiness, surveyDataSummer2017$IsTechStartup))
 shapiro.test(surveyDataSummer2017$PostClientBusiness)
+wilcox.test(PostClientBusiness ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostCSHelpPeople
 suppressWarnings(describeBy(surveyDataSummer2017$PostCSHelpPeople, surveyDataSummer2017$IsTechStartup))
 shapiro.test(surveyDataSummer2017$PostCSHelpPeople)
+wilcox.test(PostCSHelpPeople ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostIncreaseComfortComputing
 suppressWarnings(describeBy(surveyDataSummer2017$PostIncreaseComfortComputing, surveyDataSummer2017$IsTechStartup))
 shapiro.test(surveyDataSummer2017$PostIncreaseComfortComputing)
+wilcox.test(PostIncreaseComfortComputing ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostWelcomingHelpful
 suppressWarnings(describeBy(surveyDataSummer2017$PostWelcomingHelpful, surveyDataSummer2017$IsTechStartup))
 shapiro.test(surveyDataSummer2017$PostWelcomingHelpful)
+wilcox.test(PostWelcomingHelpful ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostMaintainFOSS
 suppressWarnings(describeBy(surveyDataSummer2017$PostMaintainFOSS, surveyDataSummer2017$IsTechStartup))
 shapiro.test(surveyDataSummer2017$PostMaintainFOSS)
+wilcox.test(PostMaintainFOSS ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostBehaveProfessional
 suppressWarnings(describeBy(surveyDataSummer2017$PostBehaveProfessional, surveyDataSummer2017$IsTechStartup))
 shapiro.test(surveyDataSummer2017$PostBehaveProfessional)
+wilcox.test(PostBehaveProfessional ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostHighlyRelevant
-suppressWarnings(describeBy(surveyDataSummer2017$PostHighlyRevelant, surveyDataSummer2017$IsTechStartup))
-shapiro.test(surveyDataSummer2017$PostHighlyRevelant)
+suppressWarnings(describeBy(surveyDataSummer2017$PostHighlyRelevant, surveyDataSummer2017$IsTechStartup))
+shapiro.test(surveyDataSummer2017$PostHighlyRelevant)
+wilcox.test(PostHighlyRelevant ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostHelpfulClients
 #suppressWarnings(describeBy(surveyDataSummer2017$PostHelpfulClients, surveyDataSummer2017$IsTechStartup))
