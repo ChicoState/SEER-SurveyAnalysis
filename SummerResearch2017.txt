@@ -1,0 +1,88 @@
+   vars   n mean   sd median trimmed  mad min max range  skew kurtosis   se
+X1    1 134 4.05 1.01      4    4.18 1.48   1   5     4 -0.98     0.62 0.09
+
+	Shapiro-Wilk normality test
+
+data:  surveyDataSummer2017$PostBenefitSociety
+W = 0.81571, p-value = 1.107e-11
+
+   vars   n mean   sd median trimmed  mad min max range skew kurtosis   se
+X1    1 134 4.11 0.93      4    4.23 1.48   1   5     4   -1      0.7 0.08
+
+	Shapiro-Wilk normality test
+
+data:  surveyDataSummer2017$PostAppreciateUsefulness
+W = 0.81441, p-value = 9.932e-12
+
+   vars   n mean   sd median trimmed  mad min max range  skew kurtosis   se
+X1    1 134 4.42 0.64    4.5     4.5 0.74   3   5     2 -0.63    -0.61 0.06
+
+	Shapiro-Wilk normality test
+
+data:  surveyDataSummer2017$PostTeamInteractions
+W = 0.74376, p-value = 5.268e-14
+
+   vars  n mean   sd median trimmed  mad min max range  skew kurtosis   se
+X1    1 98 3.31 1.54      4    3.38 1.48   1   5     4 -0.36    -1.41 0.16
+
+	Shapiro-Wilk normality test
+
+data:  surveyDataSummer2017$PostClientTechnical
+W = 0.83566, p-value = 4.698e-09
+
+   vars  n mean   sd median trimmed  mad min max range  skew kurtosis   se
+X1    1 98 3.44 1.16      3    3.52 1.48   1   5     4 -0.38    -0.47 0.12
+
+	Shapiro-Wilk normality test
+
+data:  surveyDataSummer2017$PostClientBusiness
+W = 0.88953, p-value = 5.836e-07
+
+   vars   n mean   sd median trimmed  mad min max range skew kurtosis   se
+X1    1 254 3.06 1.74      3    3.07 2.97   1   5     4 -0.1    -1.75 0.11
+
+	Shapiro-Wilk normality test
+
+data:  surveyDataSummer2017$PostCSHelpPeople
+W = 0.77652, p-value < 2.2e-16
+
+   vars   n mean   sd median trimmed  mad min max range  skew kurtosis   se
+X1    1 132 3.83 0.96      4    3.93 1.48   1   5     4 -0.75     0.32 0.08
+
+	Shapiro-Wilk normality test
+
+data:  surveyDataSummer2017$PostIncreaseComfortComputing
+W = 0.85879, p-value = 6.918e-10
+
+   vars   n mean   sd median trimmed  mad min max range  skew kurtosis   se
+X1    1 134 4.13 0.98      4    4.27 1.48   1   5     4 -1.19     1.23 0.09
+
+	Shapiro-Wilk normality test
+
+data:  surveyDataSummer2017$PostWelcomingHelpful
+W = 0.79303, p-value = 1.791e-12
+
+   vars   n mean   sd median trimmed  mad min max range  skew kurtosis   se
+X1    1 134 3.84 0.85      4    3.86 1.48   1   5     4 -0.48     0.38 0.07
+
+	Shapiro-Wilk normality test
+
+data:  surveyDataSummer2017$PostMaintainFOSS
+W = 0.8532, p-value = 3.235e-10
+
+   vars   n mean   sd median trimmed  mad min max range  skew kurtosis   se
+X1    1 134 4.06 0.89      4    4.17 1.48   1   5     4 -1.13     1.66 0.08
+
+	Shapiro-Wilk normality test
+
+data:  surveyDataSummer2017$PostBehaveProfessional
+W = 0.806, p-value = 4.986e-12
+
+   vars   n mean   sd median trimmed  mad min max range  skew kurtosis   se
+X1    1 134 3.85 1.09      4    3.97 1.48   1   5     4 -0.73    -0.29 0.09
+
+	Shapiro-Wilk normality test
+
+data:  surveyDataSummer2017$PostHighlyRevelant
+W = 0.85436, p-value = 3.62e-10
+
