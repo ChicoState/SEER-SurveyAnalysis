@@ -22,19 +22,22 @@ surveyDataSummer2017$IsTechStartUp[surveyDataSummer2017$ProjectType%in% c("HFOSS
 #Summary statistics of a variable by choice of project.
 
 #PostBenefitSociety
-describeBy(surveyDataSummer2017$PostBenefitSociety, surveyDataSummer2017$IsTechStartUp)
-shapiro.test(surveyDataSummer2017$PostBenefitSociety)
-wilcox.test(PostBenefitSociety ~ IsTechStartUp, data=surveyDataSummer2017)
+surveyDataSummer2017$DeltaBenefitSociety <- surveyDataSummer2017$PostBenefitSociety - surveyDataSummer2017$PreBenefitSociety
+describeBy(surveyDataSummer2017$DeltaBenefitSociety, surveyDataSummer2017$IsTechStartUp)
+shapiro.test(surveyDataSummer2017$DeltaBenefitSociety)
+wilcox.test(DeltaBenefitSociety ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostAppreciateUsefulness
-describeBy(surveyDataSummer2017$PostAppreciateUsefulness, surveyDataSummer2017$IsTechStartUp)
-shapiro.test(surveyDataSummer2017$PostAppreciateUsefulness)
-wilcox.test(PostAppreciateUsefulness ~ IsTechStartUp, data=surveyDataSummer2017)
+surveyDataSummer2017$DeltaAppreciateUsefulness <- surveyDataSummer2017$PostAppreciateUsefulness - surveyDataSummer2017$PreUsefulnessOfComputing
+describeBy(surveyDataSummer2017$DeltaAppreciateUsefulness, surveyDataSummer2017$IsTechStartUp)
+shapiro.test(surveyDataSummer2017$DeltaAppreciateUsefulness)
+wilcox.test(DeltaAppreciateUsefulness ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostTeamInteractions
-describeBy(surveyDataSummer2017$PostTeamInteractions, surveyDataSummer2017$IsTechStartUp)
-shapiro.test(surveyDataSummer2017$PostTeamInteractions)
-wilcox.test(PostTeamInteractions ~ IsTechStartUp, data=surveyDataSummer2017)
+surveyDataSummer2017$DeltaTeamInteractions <- surveyDataSummer2017$PostTeamInteractions - surveyDataSummer2017$PreTeamInteractions
+describeBy(surveyDataSummer2017$DeltaTeamInteractions, surveyDataSummer2017$IsTechStartUp)
+shapiro.test(surveyDataSummer2017$DeltaTeamInteractions)
+wilcox.test(DeltaTeamInteractions ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostClientTechnical
 describeBy(surveyDataSummer2017$PostClientTechnical, surveyDataSummer2017$IsTechStartUp)
@@ -47,14 +50,16 @@ shapiro.test(surveyDataSummer2017$PostClientBusiness)
 wilcox.test(PostClientBusiness ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostCSHelpPeople
-describeBy(surveyDataSummer2017$PostCSHelpPeople, surveyDataSummer2017$IsTechStartUp)
-shapiro.test(surveyDataSummer2017$PostCSHelpPeople)
-wilcox.test(PostCSHelpPeople ~ IsTechStartUp, data=surveyDataSummer2017)
+surveyDataSummer2017$DeltaCSHelpPeople <- surveyDataSummer2017$PostCSHelpPeople - surveyDataSummer2017$PreCSHelpPeople
+describeBy(surveyDataSummer2017$DeltaCSHelpPeople, surveyDataSummer2017$IsTechStartUp)
+shapiro.test(surveyDataSummer2017$DeltaCSHelpPeople)
+wilcox.test(DeltaCSHelpPeople ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostIncreaseComfortComputing
-describeBy(surveyDataSummer2017$PostIncreaseComfortComputing, surveyDataSummer2017$IsTechStartUp)
-shapiro.test(surveyDataSummer2017$PostIncreaseComfortComputing)
-wilcox.test(PostIncreaseComfortComputing ~ IsTechStartUp, data=surveyDataSummer2017)
+surveyDataSummer2017$DeltaComfortComputing <- surveyDataSummer2017$PostIncreaseComfortComputing - surveyDataSummer2017$PreComfortableComputing
+describeBy(surveyDataSummer2017$DeltaComfortComputing, surveyDataSummer2017$IsTechStartUp)
+shapiro.test(surveyDataSummer2017$DeltaComfortComputing)
+wilcox.test(DeltaComfortComputing ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostWelcomingHelpful
 describeBy(surveyDataSummer2017$PostWelcomingHelpful, surveyDataSummer2017$IsTechStartUp)
@@ -62,14 +67,16 @@ shapiro.test(surveyDataSummer2017$PostWelcomingHelpful)
 wilcox.test(PostWelcomingHelpful ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostMaintainFOSS
-describeBy(surveyDataSummer2017$PostMaintainFOSS, surveyDataSummer2017$IsTechStartUp)
-shapiro.test(surveyDataSummer2017$PostMaintainFOSS)
-wilcox.test(PostMaintainFOSS ~ IsTechStartUp, data=surveyDataSummer2017)
+surveyDataSummer2017$DeltaMaintainFOSS <- surveyDataSummer2017$PostMaintainFOSS - surveyDataSummer2017$PreMaintainProject
+describeBy(surveyDataSummer2017$DeltaMaintainFOSS, surveyDataSummer2017$IsTechStartUp)
+shapiro.test(surveyDataSummer2017$DeltaMaintainFOSS)
+wilcox.test(DeltaMaintainFOSS ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostBehaveProfessional
-describeBy(surveyDataSummer2017$PostBehaveProfessional, surveyDataSummer2017$IsTechStartUp)
-shapiro.test(surveyDataSummer2017$PostBehaveProfessional)
-wilcox.test(PostBehaveProfessional ~ IsTechStartUp, data=surveyDataSummer2017)
+surveyDataSummer2017$DeltaBehaveProfessional <- surveyDataSummer2017$PostBehaveProfessional - surveyDataSummer2017$PreBehaveProfessional
+describeBy(surveyDataSummer2017$DeltaBehaveProfessional, surveyDataSummer2017$IsTechStartUp)
+shapiro.test(surveyDataSummer2017$DeltaBehaveProfessional)
+wilcox.test(DeltaBehaveProfessional ~ IsTechStartUp, data=surveyDataSummer2017)
 
 #PostHighlyRelevant
 describeBy(surveyDataSummer2017$PostHighlyRelevant, surveyDataSummer2017$IsTechStartUp)
