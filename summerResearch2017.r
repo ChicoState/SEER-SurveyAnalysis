@@ -1,9 +1,10 @@
-#Using the library Psych
+#Using the library Psych and plyr
 library(psych)
+library(plyr)
 setwd("C:/Users/william/Desktop/SEER-SurveyAnalysis")
 #Read in data and stored it in surveyDataSummer2017 and ignore DK
 surveyDataSummer2017 <- read.csv(file="C:/Users/william/Desktop/SEER-SurveyAnalysis/TechStartupSummer2017.csv", header=T, sep=",")
-#ignoring DKgsub("DK", "", surveyDataSummer2017)
+#ignoring DK
 surveyDataSummer2017[surveyDataSummer2017 == "DK"] <- NA
 sink('SummerResearch2017.txt')
 #Created a new column, ProjectType, which categorizes the projects.
@@ -12,7 +13,7 @@ surveyDataSummer2017$ProjectType[surveyDataSummer2017$PostProject%in% c("Hack N 
 surveyDataSummer2017$ProjectType[surveyDataSummer2017$PostProject%in% c("Better RQM", "Greatest RQM", "Automated User Tracking System", "AUTSNoon", "AUTSOne")] <- "Industry"
 surveyDataSummer2017$ProjectType[surveyDataSummer2017$PostProject%in% c("Apache Spark", "KDevelop", "Mozilla", "RethinkDB", "Akka", "Vault")]<- "FOSS"
 surveyDataSummer2017$ProjectType[surveyDataSummer2017$PostProject%in% c("MouseTrap")]<- "HFOSS"
-surveyDataSummer2017$ProjectType[surveyDataSummer2017$PostProject%in% c("Job Match", "Ballzy", "Wanderlust", "eSport Connect", "Pocket TA","Mifos", "Bootstrap","Swift", "ReactJS","Xenon","Mousetrap", "Grading App", "Rate My Rental", "Automated User Tracking System", "VR Public Speaking Simulator", "Loop", "Brow Pro", "CSU Deals", "VRPS", "")]<-"Startup"
+surveyDataSummer2017$ProjectType[surveyDataSummer2017$PostProject%in% c("Job Match", "Ballzy", "Wanderlust", "eSport Connect", "Pocket TA","Mifos", "Bootstrap","Swift", "ReactJS","Xenon","Mousetrap", "Grading App", "Rate My Rental", "Automated User Tracking System", "VR Public Speaking Simulator", "Loop", "Brow Pro", "CSU Deals", "VRPS")]<-"Startup"
 surveyDataSummer2017$ProjectType[surveyDataSummer2017$PostProject%in% c("RadioSTAR", "MESA Career Fair")]<- "LOCALORG"
 
 #Created another column that tells us whether or not the project was tech startup
@@ -83,39 +84,15 @@ describeBy(surveyDataSummer2017$PostHighlyRelevant, surveyDataSummer2017$IsTechS
 shapiro.test(surveyDataSummer2017$PostHighlyRelevant)
 wilcox.test(PostHighlyRelevant ~ IsTechStartUp, data=surveyDataSummer2017)
 
-#PostHelpfulClients
-#suppressWarnings(describeBy(surveyDataSummer2017$PostHelpfulClients, surveyDataSummer2017$IsTechStartup))
-#shapiro.test(surveyDataSummer2017$PostHelpfulClients)
+#postPredominantContact we now have the columns
+pairwise.t.test(surveyDataSummer2017$PostPredominantContact, surveyDataSummer2017$IsTechStartUp, p.adj = "bonferroni")
+wilcox.test(IsTechStartup, data= surveyDataSummer2017)
 
-#PostPositiveImpact
-#suppressWarnings(describeBy(surveyDataSummer2017$PostCSPositiveImpact, surveyDataSummer2017$IsTechStartup))
-#shapiro.test(surveyDataSummer2017$PostCSPositiveImpact)
+#Communicated 
+surveyDataSummer2017$Communicated <- revalue(surveyDataSummer2017$Communicated,c("I had a mentor or customer but only other team members directly communicated with them"="1", "Less than once a month"="2", "Each month"="3", "Each week"="4", "Each day"="5"))
+pairwise.t.test(surveyDataSummer2017$Communicated, surveyDataSummer2017$IsTechStartUp, p.adj = "bonferroni")
+wilcox.test(Communicated ~ IsTechStartup, data= surveyDataSummer2017)
 
-#PostCommunicationHelpful
-#suppressWarnings(describeBy(surveyDataSummer2017$PostCommunicationHelpful, surveyDataSummer2017$IsTechStartup, na.))
-#shapiro.test(surveyDataSummer2017$PostCommunicationHelpful)
-
-#PostCommunicated
-#suppressWarnings(describeBy(surveyDataSummer2017$PostCommunicated, surveyDataSummer2017$IsTechStartup))
-#shapiro.test(surveyDataSummer2017$PostCommunicated)
-
-#PostDescribeToolTechniques
-#suppressWarnings(describeBy(surveyDataSummer2017$PostDescribeToolTechniques, surveyDataSummer2017$IsTechStartup))
-#shapiro.test(surveyDataSummer2017$PostDescribeToolTechniques)
-
-#PostCSPositiveImpact
-#suppressWarnings(describeBy(surveyDataSummer2017$PostCSPositiveImpact, surveyDataSummer2017$IsTechStartup))
-#shapiro.test(surveyDataSummer2017$PostCSPositiveImpact)
-
-#PostWantedToHelpPeople
-#suppressWarnings(describeBy(surveyDataSummer2017$PostWantedTohelpPeople, surveyDataSummer2017$IsTechStartup))
-#shapiro.test(surveyDataSummer2017$PostWantedToHelpPeople)
-
-#PostServeLocal
-#suppressWarnings(describeBy(surveyDataSummer2017$PostServeInternational, surveyDataSummer2017$IsTechStartup))
-#shapiro.test(surveyDataSummer2017$PostServeInternational)
-
-#PostServeSchool
-#describeBy(surveyDataSummer2017$PostServeSchool, surveyDataSummer2017$IsTechStartup, na.rm=TRUE)
-#shapiro.test(surveyDataSummer2017$PostServeSchool)
+#ConfidenceComputing
+surveyDataSummer2017$DeltaConfidenceComputing <- surveyDataSummer2017$PostIncreaseConfidenceComputing - surveyDataSummer2017$PreConfidenceComputing
 sink()
