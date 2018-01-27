@@ -1,9 +1,11 @@
-#Using the library Psych
+#Using the library Psych and plyr
 library(psych)
-setwd("C:/Users/william/Desktop/SEER-SurveyAnalysis")
+library(plyr)
+library(dplyr)
+#setwd("C:/Users/william/Desktop/SEER-SurveyAnalysis")
 #Read in data and stored it in surveyDataSummer2017 and ignore DK
-surveyDataSummer2017 <- read.csv(file="C:/Users/william/Desktop/SEER-SurveyAnalysis/TechStartupSummer2017.csv", header=T, sep=",")
-#ignoring DKgsub("DK", "", surveyDataSummer2017)
+surveyDataSummer2017 <- read.csv(file="C:/Users/willi/Desktop/SEER-SurveyAnalysis/TechStartupSummer2017.csv", header=T, sep=",")
+#ignoring DK
 surveyDataSummer2017[surveyDataSummer2017 == "DK"] <- NA
 sink('SummerResearch2017.txt')
 #Created a new column, ProjectType, which categorizes the projects.
@@ -12,7 +14,7 @@ surveyDataSummer2017$ProjectType[surveyDataSummer2017$PostProject%in% c("Hack N 
 surveyDataSummer2017$ProjectType[surveyDataSummer2017$PostProject%in% c("Better RQM", "Greatest RQM", "Automated User Tracking System", "AUTSNoon", "AUTSOne")] <- "Industry"
 surveyDataSummer2017$ProjectType[surveyDataSummer2017$PostProject%in% c("Apache Spark", "KDevelop", "Mozilla", "RethinkDB", "Akka", "Vault")]<- "FOSS"
 surveyDataSummer2017$ProjectType[surveyDataSummer2017$PostProject%in% c("MouseTrap")]<- "HFOSS"
-surveyDataSummer2017$ProjectType[surveyDataSummer2017$PostProject%in% c("Job Match", "Ballzy", "Wanderlust", "eSport Connect", "Pocket TA","Mifos", "Bootstrap","Swift", "ReactJS","Xenon","Mousetrap", "Grading App", "Rate My Rental", "Automated User Tracking System", "VR Public Speaking Simulator", "Loop", "Brow Pro", "CSU Deals", "VRPS", "")]<-"Startup"
+surveyDataSummer2017$ProjectType[surveyDataSummer2017$PostProject%in% c("Job Match", "Ballzy", "Wanderlust", "eSport Connect", "Pocket TA","Mifos", "Bootstrap","Swift", "ReactJS","Xenon","Mousetrap", "Grading App", "Rate My Rental", "Automated User Tracking System", "VR Public Speaking Simulator", "Loop", "Brow Pro", "CSU Deals", "VRPS")]<-"Startup"
 surveyDataSummer2017$ProjectType[surveyDataSummer2017$PostProject%in% c("RadioSTAR", "MESA Career Fair")]<- "LOCALORG"
 
 #Created another column that tells us whether or not the project was tech startup
@@ -82,13 +84,15 @@ wilcox.test(DeltaBehaveProfessional ~ IsTechStartUp, data=surveyDataSummer2017)
 describeBy(surveyDataSummer2017$PostHighlyRelevant, surveyDataSummer2017$IsTechStartUp)
 shapiro.test(surveyDataSummer2017$PostHighlyRelevant)
 wilcox.test(PostHighlyRelevant ~ IsTechStartUp, data=surveyDataSummer2017)
+# Commented variables are variables that are not numeric so cannot run tests on these yet
 
 #PostHelpfulClients
-#suppressWarnings(describeBy(surveyDataSummer2017$PostHelpfulClients, surveyDataSummer2017$IsTechStartup))
+#as.numeric(surveyDataSummer2017$PostHelpfulClients)
+#describeBy(surveyDataSummer2017$PostHelpfulClients, surveyDataSummer2017$IsTechStartup)
 #shapiro.test(surveyDataSummer2017$PostHelpfulClients)
 
 #PostPositiveImpact
-#suppressWarnings(describeBy(surveyDataSummer2017$PostCSPositiveImpact, surveyDataSummer2017$IsTechStartup))
+#describeBy(surveyDataSummer2017$PostCSPositiveImpact, surveyDataSummer2017$IsTechStartup)
 #shapiro.test(surveyDataSummer2017$PostCSPositiveImpact)
 
 #PostCommunicationHelpful
@@ -118,4 +122,38 @@ wilcox.test(PostHighlyRelevant ~ IsTechStartUp, data=surveyDataSummer2017)
 #PostServeSchool
 #describeBy(surveyDataSummer2017$PostServeSchool, surveyDataSummer2017$IsTechStartup, na.rm=TRUE)
 #shapiro.test(surveyDataSummer2017$PostServeSchool)
+
+# Blank variables are still counted on here finding a way to ignore this variable
+# on ClientFaceToFace variable first before applying to other ones.
+
+#PostCLientFaceToFace
+surveyDataSummer2017$PostClientFaceToFaceRanked <- surveyDataSummer2017$PostClientFaceToFace
+#Did not put each day because there were none.
+surveyDataSummer2017$PostClientFaceToFaceRanked <- revalue(surveyDataSummer2017$PostClientFaceToFaceRanked, c("Never"="1","Less than once a month"="2", "Each month"="3", "Each week"="4"))
+surveyDataSummer2017$PostClientFaceToFaceRanked <- as.numeric(surveyDataSummer2017$PostClientFaceToFaceRanked)
+describeBy(surveyDataSummer2017$PostClientFaceToFaceRanked, surveyDataSummer2017$Semester)
+shapiro.test(surveyDataSummer2017$PostClientFaceToFaceRanked)
+
+#PostCLientSynchronous
+#surveyDataSummer2017$PostClientAsynchronousRanked <- surveyDataSummer2017$PostClientAsynchronous
+#surveyDataSummer2017$AsynchronousRanked <- revalue(surveyDataSummer2017$PostClientAsynchronousRanked, c("Never"="1","Less than once a month"="2", "Each month"="3", "Each week"="4", "Each day"="5"))
+#describeBy(surveyDataSummer2017$PostClientAsynchronousRanked, surveyDataSummer2017$Semester)
+
+#PostCLientSynchronous
+#surveyDataSummer2017$PostClientSynchronousRanked <- surveyDataSummer2017$PostClientSynchronous
+#surveyDataSummer2017$PostClientSynchronousRanked <- revalue(surveyDataSummer2017$PostClientSynchronousRanked, c("Never"="1","Less than once a month"="2", "Each month"="3", "Each week"="4", "Each day"="5"))
+#describeBy(surveyDataSummer2017$PostClientSynchronousRanked, surveyDataSummer2017$Semester)
+
+#postPredominantContact
+#surveyDataSummer2017$PostPredominantContactRanked <- surveyDataSummer2017$PostPredominantContact
+#surveyDataSummer2017$PostPredominantContactRanked <- revalue(surveyDataSummer2017$PostPredominantContactRanked, c("Asynchronous communication (Email bulletin boards messaging at different times etc)"="1", "Synchronous communication (Phone video messaging instant messaging talking at the same time)"="2", "Synchronous communication (Phone video messaging instant messaging etc)"="2", "In person"="3"))
+#wilcox.test(PostPredominantContact ~ IsTechStartup, data= surveyDataSummer2017)
+
+#Communicated 
+#surveyDataSummer2017$CommunicatedRanked <- surveyDataSummer2017$Communicated
+#surveyDataSummer2017$CommunicatedRanked <- revalue(surveyDataSummer2017$CommunicatedRanked,c("I had a mentor or customer but only other team members directly communicated with them"="1", "Less than once a month"="2", "Each month"="3", "Each week"="4", "Each day"="5"))
+#wilcox.test(CommunicatedRanked ~ IsTechStartup, data= surveyDataSummer2017)
+
+#ConfidenceComputing
+#surveyDataSummer2017$DeltaConfidenceComputing <- surveyDataSummer2017$PostIncreaseConfidenceComputing - surveyDataSummer2017$PreConfidenceComputing
 sink()
